@@ -41,9 +41,9 @@ For training the model I used WPI's ACE server. The first versions of the model 
 
 I ran the model for 180 epochs with a batch size of 125 images. Since I combined the training images and the testing images, I had the 70,000 Mnst images avaible. The batch count was number of images divided by the batchsize equal to 560. Meaning for each epoch the model was trained on 560 random image batches of size 125. For sake of simplcity, I kept track of the loss of the generator and discrinimator for the final image batch for each epoch. Below you can see the loss for the generator drastically fall after about 25 epochs remain farily flat from that point on.   
 <!-- .element height="50%" width="50%" -->
-![Loss](img/GAN__loss.png) 
+![Loss](img/GAN__loss.png =100x200) 
 
-![Gen](img/gen.gif) <!-- .element height="50%" width="50%" -->
+![Gen](img/gen.gif =100x200) <!-- .element height="50%" width="50%" -->
 
 
 
