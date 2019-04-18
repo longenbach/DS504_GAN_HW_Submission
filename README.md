@@ -2,10 +2,10 @@
 #### Name: Sam Longenbach
 #### GitHub: https://github.com/longenbach/DS504_GAN_HW_Submission
 #### Files:
-- **train_v6.py** - *Python code for training GAN*
-- **generator_v6.json** - *Pre-trained model's data hierarchy*
 - **generator_v6.h5** - *Pre-trained model's weights*
-- **test.py** - *Loads generator_v6 files for testing & generating outputs*
+- **generator_v6.json** - *Pre-trained model's data hierarchy*
+- **test.ipynb** - *Loads generator_v6 files for testing & generating outputs*
+- **train_v6.py** - *Python code for training GAN*
 
 ## Generator:
 For the generator I kept the design farily simple. It consistis of 4 layers with each layer having 256, 512, 1024, and 784 nodes respectively. In a few versions I scaled the real input images from -1 to 1 and had the activation of my last layer of the gerator be tanh. However, in the version I decided to submit scaled the real input images from 0 to 1 and used an sigmoid activation in my last layer  of the gerator. For the hidden layers I stuck with relu activations due to some diffculties I was having with importing leaky relu activations form Keras. In this case relu acivations seemed to be siffcient judging by the outputs of the trained model. 
@@ -43,8 +43,7 @@ I ran the model for 180 epochs with a batch size of 125 images. Since I combined
 
 ![Loss](img/GAN__loss.png)
 
-![Alt Text](https://giphy.com/gifs/VFZ6ytjJ85dQekIJ4T)
-<iframe src="https://giphy.com/embed/VFZ6ytjJ85dQekIJ4T" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/VFZ6ytjJ85dQekIJ4T">via GIPHY</a></p>
+![Gen](img/gen.gif)
 
 
 
