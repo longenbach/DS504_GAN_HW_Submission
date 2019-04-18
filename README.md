@@ -28,6 +28,9 @@ d.compile(loss='binary_crossentropy', optimizer=adam, metrics=['accuracy'])
 ## Training:
 
 
+![ACE](img/ACE_server.png)
+![Loss](img/GAN__loss.png)
+
 
 
 
