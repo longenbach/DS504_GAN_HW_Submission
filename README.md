@@ -44,6 +44,8 @@ I ran the model for 180 epochs with a batch size of 125 images. Since I combined
 ![Loss](img/GAN__loss.png)
 
 
+<iframe src="https://giphy.com/embed/VFZ6ytjJ85dQekIJ4T" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/VFZ6ytjJ85dQekIJ4T">via GIPHY</a></p>
+
 
 
 
