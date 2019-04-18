@@ -6,7 +6,7 @@
 - **generator_v6.json** - *Pre-trained model's data hierarchy*
 - **test.ipynb** - *Loads generator_v6 files for testing & generating images*
 - **train_v6.py** - *Python code for training GAN*
-#### Exmaple of 5by5 Model Output: *Use test.ipynb to generate more examples*
+#### Exmaple of 5by5 Model Output:         *Use test.ipynb to generate more examples*
 ![5by5](img/5by5.png) 
 
 ## Generator:
