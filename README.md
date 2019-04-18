@@ -1,4 +1,8 @@
-# DS504_GAN_HW_Submission
+# DS504 GAN HW Submission
+#### Name: Sam Longenbach
+#### GitHub: 
+
+
 
 ## Generator:
 For the generator I kept the design farily simple. It consistis of 4 layers with each layer having 256, 512, 1024, and 784 nodes respectively. In a few versions I scaled the real input images from -1 to 1 and had the activation of my last layer of the gerator be tanh. However, in the version I decided to submit scaled the real input images from 0 to 1 and used an sigmoid activation in my last layer  of the gerator. For the hidden layers I stuck with relu activations due to some diffculties I was having with importing leaky relu activations form Keras. In this case relu acivations seemed to be siffcient judging by the outputs of the trained model. 
