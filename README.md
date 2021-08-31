@@ -4,11 +4,13 @@
 #### Files:
 - **generator_v6.h5** - *Pre-trained model's weights*
 - **generator_v6.json** - *Pre-trained model's data hierarchy*
-- **test.ipynb** - *Loads generator_v6 files for testing & generating outputs*
+- **test.ipynb** - *Loads generator_v6 files for testing & generating images*
 - **train_v6.py** - *Python code for training GAN*
+#### Exmaple of 5by5 Model Output:         *Use test.ipynb to generate more examples*
+![5by5](img/5by5.png) 
 
 ## Generator:
-For the generator I kept the design farily simple. It consistis of 4 layers with each layer having 256, 512, 1024, and 784 nodes respectively. In a few versions I scaled the real input images from -1 to 1 and had the activation of my last layer of the gerator be tanh. However, in the version I decided to submit scaled the real input images from 0 to 1 and used an sigmoid activation in my last layer  of the gerator. For the hidden layers I stuck with relu activations due to some diffculties I was having with importing leaky relu activations form Keras. In this case relu acivations seemed to be siffcient judging by the outputs of the trained model. 
+For the generator I kept the design farily simple. It consistis of 4 layers with each layer having 256, 512, 1024, and 784 nodes respectively. In a few versions I scaled the real input images from -1 to 1 and had the activation of my last layer of the gerator be tanh. However, in the version I decided to submit scaled the real input images from 0 to 1 and used an sigmoid activation in my last layer  of the gerator. For the hidden layers I stuck with relu activations due to some diffculties I was having with importing leaky relu activations form Keras. In this case relu acivations seemed to be suffcient judging by the outputs of the trained model. 
 
 ```python
 g = Sequential()
@@ -39,12 +41,11 @@ For training the model I used WPI's ACE server. The first versions of the model 
 *NumNodes=1 NumCPUs=36 NumTasks=35 CPUs/Task=1 ReqB:S:C:T=0:0:*:*TRES=cpu=36,mem=20G,node=1,billing=36,gres/gpu=2*
 ![ACE](img/ACE_server.png)
 
-I ran the model for 180 epochs with a batch size of 125 images. Since I combined the training images and the testing images, I had the 70,000 Mnst images avaible. The batch count was number of images divided by the batchsize equal to 560. Meaning for each epoch the model was trained on 560 random image batches of size 125. For sake of simplcity, I kept track of the loss of the generator and discrinimator for the final image batch for each epoch. Below you can see the loss for the generator drastically fall after about 25 epochs remain farily flat from that point on.   
-<!-- .element height="50%" width="50%" -->
+I ran the model for 180 epochs with a batch size of 125 images. Since I combined the training images and the testing images, I had the 70,000 Mnst images avaible. The batch count was number of images divided by the batchsize equal to 560. Meaning for each epoch the model was trained on 560 random image batches of size 125. For sake of simplcity, I kept track of the loss of the generator and discrinimator for the final image batch for each epoch. The GIF below shows the generated outputs of the model improving as the number of epochs increases. The plot of the loss shows that for generator the loss drastically fall after about 25 epochs remains farily flat from that point on.  
+
+![Gen](img/gen.gif) 
+
 ![Loss](img/GAN__loss.png) 
-
-![Gen](img/gen.gif) <!-- .element height="50%" width="50%" -->
-
 
 
 
